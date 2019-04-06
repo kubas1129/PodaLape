@@ -10,6 +10,25 @@ CREATE TABLE customer (
 	primary key (id_customer)
 );
 
+-- Table: shelter
+CREATE TABLE shelter (
+    id_shelter int(6) UNSIGNED AUTO_INCREMENT  NOT NULL,
+    name_shelter varchar(255)  NULL,
+    latitude numeric(11,7)  NULL,
+    longitude numeric(11,7)  NULL,
+    city varchar(255)  NULL,
+	primary key (id_shelter)
+);
+
+-- Table: shelter_post
+CREATE TABLE shelter_post (
+    id_shelter_post int(6) UNSIGNED AUTO_INCREMENT  NOT NULL,
+    id_shelter int(6) UNSIGNED  NOT NULL,
+    shelter_post_date date  NULL,
+	primary key (id_shelter_post),
+	foreign key (id_shelter) references shelter(id_shelter)
+);
+
 -- Table: dog
 CREATE TABLE dog (
     id_dog int(6) UNSIGNED AUTO_INCREMENT  NOT NULL,
@@ -20,7 +39,8 @@ CREATE TABLE dog (
     color varchar(255)  NULL,
     weight numeric(4,2)  NULL,
     id_shelter int(6) UNSIGNED  NOT NULL,
-	primary key (id_dog)
+	primary key (id_dog),
+	FOREIGN KEY (id_shelter) REFERENCES shelter(id_shelter)
 );
 
 -- Table: dog_post
@@ -42,24 +62,7 @@ CREATE TABLE image (
 	foreign key (id_post_dog) references dog_post(id_post_dog)
 );
 
--- Table: shelter
-CREATE TABLE shelter (
-    id_shelter int(6) UNSIGNED AUTO_INCREMENT  NOT NULL,
-    name_shelter varchar(255)  NULL,
-    latitude numeric(11,7)  NULL,
-    longitude numeric(11,7)  NULL,
-    city varchar(255)  NULL,
-	primary key (id_shelter)
-);
 
--- Table: shelter_post
-CREATE TABLE shelter_post (
-    id_shelter_post int(6) UNSIGNED AUTO_INCREMENT  NOT NULL,
-    id_shelter int(6) UNSIGNED  NOT NULL,
-    shelter_post_date date  NULL,
-	primary key (id_shelter_post),
-	foreign key (id_shelter) references shelter(id_shelter)
-);
 
 -- Table: visit
 CREATE TABLE visit (
