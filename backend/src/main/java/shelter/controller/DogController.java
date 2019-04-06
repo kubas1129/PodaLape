@@ -25,38 +25,40 @@ public class DogController {
         int dogId = Integer.parseInt(id);
         return dogRepository.findOne(dogId);
     }
-/*
+
     @PostMapping("/dog")
     public Dog create(@RequestBody Map<String,String> body){
         String name = body.get("name");
         int  age  = Integer.parseInt(body.get("age"));
         String breed = body.get("breed");
         String gender = body.get("gender");
-        String color  =
-        double latitude = Double.parseDouble(body.get("latitude"));
-        double longitude = Double.parseDouble(body.get("longitude"));
-        String city = body.get("city");
-        return shelterRepository.save(new Shelter(name_shelter,latitude,longitude,city));
+        String color  = body.get(("color"));
+        double weight= Double.parseDouble(body.get("weight"));
+        int id_shelter = Integer.parseInt(body.get("id_shelter"));
+        return dogRepository.save(new Dog(name,age,breed,gender,color,weight,id_shelter));
     }
 
-    @PutMapping("/shelter/{id}")
-    public Shelter update(@PathVariable String id, @RequestBody Map<String,String> body){
-        int shelterId = Integer.parseInt(id);
-        Shelter shelter = shelterRepository.findOne(shelterId);
-        shelter.setName_shelter(body.get("name_shelter"));
-        shelter.setLatitude(Double.parseDouble(body.get("latitude")));
-        shelter.setLongitude(Double.parseDouble(body.get("longitude")));
-        shelter.setCity(body.get("city"));
-        return shelterRepository.save(shelter);
+    @PutMapping("/dog/{id}")
+    public Dog update(@PathVariable String id, @RequestBody Map<String,String> body){
+        int dogId = Integer.parseInt(id);
+        Dog dog = dogRepository.findOne(dogId);
+        dog.setName(body.get("name"));
+        dog.setAge(Integer.parseInt(body.get("age")));
+        dog.setBreed(body.get("breed"));
+        dog.setGender(body.get("gender"));
+        dog.setColor(body.get("color"));
+        dog.setWeight(Double.parseDouble(body.get("weight")));
+        dog.setId_shelter(Integer.parseInt(body.get("id_shelter")));
+        return dogRepository.save(dog);
     }
 
-    @DeleteMapping("shelter/{id}")
+    @DeleteMapping("dog/{id}")
     public boolean delete(@PathVariable String id) {
-        int shelterId = Integer.parseInt(id);
-        shelterRepository.delete(shelterId);
+        int dogId = Integer.parseInt(id);
+        dogRepository.delete(dogId);
         return true;
     }
-*/
+
 
 
 }
