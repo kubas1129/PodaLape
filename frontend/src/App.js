@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import TopBar from './Components/TopBar';
-import './Styles/styles.css';
+import TopBar from './Components/TopBar/TopBar';
+import './Components/TopBar/styles/styles.css';
+import DogContentWrapper from "./Components/DogController";
 const axios = require('axios');
 
 class App extends Component {
@@ -26,7 +27,10 @@ class App extends Component {
 
   render(){
     return (
-      <TopBar/>
+        <div id="container">
+            <TopBar/>
+            <DogContentWrapper/>
+        </div>
     );
   }
 }

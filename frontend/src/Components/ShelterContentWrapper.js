@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React, {Component} from "react";
 //const axios = require('axios');
 
 class ShelterContentWrapper extends Component{

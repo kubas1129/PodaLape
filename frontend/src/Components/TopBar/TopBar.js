@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 //const axios = require('axios');
-import "../Styles/styles.css";
-import logo from '../Resources/dogpawheart_logo_white.png';
-import logout from '../Resources/button_logout.svg';
+import "./styles/styles.css";
+import logo from '../../Resources/dogpawheart_logo_white.png';
+import logout from '../../Resources/button_logout.svg';
 
 class TopBar extends Component{
 
