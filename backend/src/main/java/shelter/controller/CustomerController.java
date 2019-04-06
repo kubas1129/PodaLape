@@ -37,7 +37,6 @@ public class CustomerController {
     public Customer create(@RequestBody Map<String,String> body){
         String first_name = body.get("first_name");
         String last_name = body.get("last_name");
-        System.out.println("FN: " + first_name + ", LN: " + last_name);
         return customerRepository.save(new Customer(first_name,last_name));
     }
 
