@@ -1,9 +1,7 @@
 package shelter.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Shelter {
@@ -16,6 +14,10 @@ public class Shelter {
     private double latitude;
     private double longitude;
     private String city;
+
+    @OneToMany(mappedBy = "shelter")
+    private List<Dog> dogs;
+
 
     public Shelter(){
 

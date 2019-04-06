@@ -1,9 +1,6 @@
 package shelter.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Dog {
@@ -18,32 +15,31 @@ public class Dog {
     private String gender;
     private String color;
     private double weight;
-    private int id_shelter;
+    @ManyToOne
+    @JoinColumn(name = "id_shelter")
+    private Shelter shelter;
 
 
-    public Dog(){
+    public Dog() {}
 
-    }
-
-    public Dog(String name, int age, String breed, String gender, String color, double weight, int id_shelter) {
+    public Dog(String name, int age, String breed, String gender, String color, double weight, Shelter shelter) {
         this.name = name;
         this.age = age;
         this.breed = breed;
         this.gender = gender;
         this.color = color;
         this.weight = weight;
-        this.id_shelter = id_shelter;
+        this.shelter = shelter;
     }
-
-    public Dog(int id_dog,String name, int age, String breed, String gender, String color, double weight, int id_shelter) {
-        this.id_dog=id_dog;
+    public Dog(int id_dog,String name, int age, String breed, String gender, String color, double weight, Shelter shelter) {
+        this.id_dog = id_dog;
         this.name = name;
         this.age = age;
         this.breed = breed;
         this.gender = gender;
         this.color = color;
         this.weight = weight;
-        this.id_shelter = id_shelter;
+        this.shelter = shelter;
     }
 
     public int getId_dog() {
@@ -102,11 +98,11 @@ public class Dog {
         this.weight = weight;
     }
 
-    public int getId_shelter() {
-        return id_shelter;
+    public Shelter getShelter() {
+        return shelter;
     }
 
-    public void setId_shelter(int id_shelter) {
-        this.id_shelter = id_shelter;
+    public void setShelter(Shelter shelter) {
+        this.shelter = shelter;
     }
 }
