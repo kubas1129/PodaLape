@@ -1,8 +1,28 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
 class App extends Component {
+
+    constructor(props) {
+
+        super(props);
+
+        this.state = {
+            responseString: "Welcome!"
+    }
+    }
+
+    componentDidMount(){
+        axios.get("localhost:8080").then((response) =>
+        {
+            console.log(response);
+            //this.setState({responseString: response})
+        }).catch((error) => alert(error));
+
+    }
+
   render() {
     return (
       <div className="App">
@@ -19,6 +39,7 @@ class App extends Component {
           >
             Learn React
           </a>
+            <h1>{this.state.responseString}</h1>
         </header>
       </div>
     );
