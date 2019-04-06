@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import axios from 'axios';
+import TopBar from './Components/TopBar';
+import './Styles/styles.css';
+const axios = require('axios');
 
 class App extends Component {
 
@@ -11,37 +11,22 @@ class App extends Component {
 
         this.state = {
             responseString: "Welcome!"
-    }
+        }
+
     }
 
-    componentDidMount(){
-        axios.get("localhost:8080").then((response) =>
-        {
+    componentDidMount() {
+        axios.get("http://localhost:8090/").then((response) => {
             console.log(response);
             //this.setState({responseString: response})
-        }).catch((error) => alert(error));
-
+        });
     }
 
-  render() {
+
+
+  render(){
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-            <h1>{this.state.responseString}</h1>
-        </header>
-      </div>
+      <TopBar/>
     );
   }
 }
