@@ -9,6 +9,6 @@ import java.util.List;
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 
     // custom query to search to blog post by title or content
-//    List<Customer> findByTitleContainingOrContentContaining(String text, String textAgain);
+  //  List<Customer> findByTitleContainingOrContentContaining(String text, String textAgain);
 
 }

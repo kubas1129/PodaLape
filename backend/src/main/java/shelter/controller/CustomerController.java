@@ -6,6 +6,7 @@ import shelter.model.Customer;
 import shelter.model.CustomerRepository;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class CustomerController {
@@ -18,41 +19,42 @@ public class CustomerController {
         return customerRepository.findAll();
     }
 
-//    @GetMapping("/blog/{id}")
-//    public Blog show(@PathVariable String id){
-//        int blogId = Integer.parseInt(id);
-//        return blogRespository.findOne(blogId);
-//    }
-//
-//    @PostMapping("/blog/search")
-//    public List<Blog> search(@RequestBody Map<String, String> body){
-//        String searchTerm = body.get("text");
-//        return blogRespository.findByTitleContainingOrContentContaining(searchTerm, searchTerm);
-//    }
-//
-//    @PostMapping("/blog")
-//    public Blog create(@RequestBody Map<String, String> body){
-//        String title = body.get("title");
-//        String content = body.get("content");
-//        return blogRespository.save(new Blog(title, content));
-//    }
-//
-//    @PutMapping("/blog/{id}")
-//    public Blog update(@PathVariable String id, @RequestBody Map<String, String> body){
-//        int blogId = Integer.parseInt(id);
-//        // getting blog
-//        Blog blog = blogRespository.findOne(blogId);
-//        blog.setTitle(body.get("title"));
-//        blog.setContent(body.get("content"));
-//        return blogRespository.save(blog);
-//    }
-//
-//    @DeleteMapping("blog/{id}")
-//    public boolean delete(@PathVariable String id){
-//        int blogId = Integer.parseInt(id);
-//        blogRespository.delete(blogId);
-//        return true;
-//    }
+    @GetMapping("/customer/{id}")
+    public Customer show(@PathVariable String id) {
+        int customerId = Integer.parseInt(id);
+        return customerRepository.findOne(customerId);
+    }
 
+
+    /*@PostMapping("customer/search")
+    public List<Customer> search(@RequestBody Map<String,String> body){
+        String searchTerm = body.get("text");
+        return customerRepository.findByTitleContainingOrContentContaining(searchTerm,searchTerm);
+
+    }*/
+
+    @PostMapping("/customer")
+    public Customer create(@RequestBody Map<String,String> body){
+        String first_name = body.get("first_name");
+        String last_name = body.get("last_name");
+        System.out.println("FN: " + first_name + ", LN: " + last_name);
+        return customerRepository.save(new Customer(first_name,last_name));
+    }
+
+    @PutMapping("/customer/{id}")
+    public Customer update(@PathVariable String id, @RequestBody Map<String,String> body){
+        int customerId = Integer.parseInt(id);
+        Customer customer = customerRepository.findOne(customerId);
+        customer.setFirst_name(body.get("first_name"));
+        customer.setLast_name(body.get("last_name"));
+        return customerRepository.save(customer);
+    }
+
+    @DeleteMapping("customer/{id}")
+    public boolean delete(@PathVariable String id) {
+        int customerId = Integer.parseInt(id);
+        customerRepository.delete(customerId);
+        return true;
+    }
 
 }
