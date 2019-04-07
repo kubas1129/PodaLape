@@ -28,7 +28,7 @@ header nav ul:before {
 }
 header nav ul:after {
   content: "";
-  width: 65%;
+  width: 59%;
 }
 header nav li {
   margin: 10px 50px 10px 0;

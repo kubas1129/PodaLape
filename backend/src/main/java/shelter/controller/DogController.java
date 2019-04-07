@@ -8,6 +8,7 @@ import shelter.model.DogRepository;
 import java.util.List;
 import java.util.Map;
 
+
 @RestController
 public class DogController {
 

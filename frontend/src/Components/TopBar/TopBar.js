@@ -20,7 +20,7 @@ class TopBar extends Component{
                     <ul>
                         <li> Psy </li>
                         <li> Schroniska </li>
-                        <li> O nas </li>
+                        <li> Oddaj Psa </li>
                     </ul>
                 </nav>
                 <div id="logout-section">

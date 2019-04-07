@@ -48,6 +48,12 @@ class DogController extends Component{
         this.expand = this.expand.bind(this);
     }
 
+    componentWillMount(){
+        fetch("http://localhost:8090/dog/").then(function(response){
+            console.log(response);
+        }).catch((error) => console.log(error));
+    }
+
     onChange = (event) => {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;

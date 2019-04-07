@@ -15,7 +15,7 @@ class SideBar extends Component{
         return (
             <aside>
                 <h2>{this.props.form.header}</h2>
-                <form onSubmit={this.props.onSubmit}>
+                <form>
                     {this.props.form.inputs.map((element, index) => <label key={index} className="input-label">{element.label}{element.input}</label>)}
                 </form>
             </aside>
