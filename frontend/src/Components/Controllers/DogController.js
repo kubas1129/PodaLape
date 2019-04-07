@@ -3,6 +3,7 @@ import SideBar from "../SideBar/SideBar";
 import dogs from "./mockdata/dogs";
 import Gallery from "../Gallery/Gallery";
 import './styles/styles.css';
+import TopBar from "../TopBar/TopBar";
 const axios = require('axios');
 
 class DogController extends Component{

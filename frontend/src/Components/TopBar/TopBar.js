@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 //const axios = require('axios');
 import "./styles/styles.css";
 import logo from '../../Resources/dogpawheart_logo_white.png';
@@ -18,8 +19,8 @@ class TopBar extends Component{
                 </div>
                 <nav>
                     <ul>
-                        <li> Psy </li>
-                        <li> Schroniska </li>
+                        <li> <Link to="/dogs">Psy</Link> </li>
+                        <li> <Link to="/shelters">Schroniska </Link></li>
                         <li> Oddaj Psa </li>
                     </ul>
                 </nav>

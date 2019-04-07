@@ -33,8 +33,13 @@ header nav ul:after {
 header nav li {
   margin: 10px 50px 10px 0;
   font-size: 25px;
-  color: white;
   padding: 5px 15px;
+  color: white;
+}
+header nav li a {
+  color: white;
+  text-decoration: none;
+  outline: none;
 }
 header nav li:hover {
   background: #d30141;
