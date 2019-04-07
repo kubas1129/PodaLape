@@ -52,6 +52,11 @@ main #gallery .gallery-tab .tab-content button:hover {
   background: #d30141;
   cursor: pointer;
 }
+main #gallery .gallery-tab .tab-content button a {
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
 main #expand {
   border-radius: 50%;
   display: block;

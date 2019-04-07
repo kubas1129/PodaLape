@@ -24,14 +24,13 @@ class DogForm extends Component{
 
   onSubmit(event){
     event.preventDefault();
-    console.log(this.state)
   }
 
   render(){
 
     return(
       <div id="form-container">
-      <h2>Oddaj pieska</h2>
+      <h2>Oddaj Tu Pieska:</h2>
         <form onSubmit={this.onSubmit}>
           <label>Imie
               <input type="text" name="name" onChange={this.onChange}/></label>
@@ -48,7 +47,7 @@ class DogForm extends Component{
               <input type="text" name="color" onChange={this.onChange}/></label>
           <label>Waga
               <input type="number" min="1"  max="100" name="weight" onChange={this.onChange}/></label>
-          <input type="submit" value="Dodaj pieska"/>
+          <input type="submit" value="Prześlij zgłoszenie"/>
         </form>
       </div>
 
