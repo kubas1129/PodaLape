@@ -19,10 +19,11 @@ $dark-pink: #d30141;
 
 #form-container{
   width: 550px;
-  margin: 80px auto;
   text-align: center;
+  margin-top: 50px;
+  padding-left: 30px;
   padding-bottom: 40px;
-  border: 1px solid $main-gray;
+  border-left: 1px dashed $main-gray;
 
   form {
 

@@ -1,0 +1,38 @@
+#shelter-details {
+  display: flex;
+  justify-content: center;
+}
+#shelter-details #shelter-content {
+  width: 400px;
+  height: 600px;
+  margin-top: 45px;
+  padding-right: 50px;
+}
+#shelter-details #shelter-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+#shelter-details #shelter-content ul li {
+  margin: 15px 0;
+  width: 100%;
+  border-bottom: 1px dashed black;
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+}
+#shelter-details #shelter-content ul li button {
+  margin-bottom: 5px;
+  width: 100px;
+  height: 25px;
+  background-color: #f4005c;
+  color: white;
+  text-align: center;
+  border-radius: 7px;
+  border: none;
+}
+#shelter-details #shelter-content ul li button:hover {
+  background: #d30141;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import '../styles/styles.css';
 
 const Shelter = (props) => {
@@ -11,7 +12,7 @@ const Shelter = (props) => {
                     <li><b>Miasto: </b>{props.details.city}</li>
                     <li><b>Psów: </b> {props.details.dogs.length}</li>
                 </ul>
-                <button>Szczegóły</button>
+                <button><Link to={"/shelter-details/" + props.details.id_shelter}>Szczegóły</Link></button>
             </div>
         </div>
     )
