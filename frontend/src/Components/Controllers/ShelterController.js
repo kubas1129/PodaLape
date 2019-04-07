@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 //const axios = require('axios');
 
-class ShelterContentWrapper extends Component{
+class ShelterController extends Component{
 
     render(){
         return (
@@ -12,4 +12,4 @@ class ShelterContentWrapper extends Component{
     }
 }
 
-export default ShelterContentWrapper;
+export default ShelterController;

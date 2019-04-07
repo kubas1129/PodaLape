@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 //const axios = require('axios');
+import "./styles/styles.css";
+
+
 
 class SideBar extends Component{
 
@@ -11,8 +14,9 @@ class SideBar extends Component{
     render(){
         return (
             <aside>
+                <h2>{this.props.form.header}</h2>
                 <form onSubmit={this.props.onSubmit}>
-                    {this.props.form.map((input, index) => <label key={index}>{input}</label>)}
+                    {this.props.form.inputs.map((element, index) => <label key={index} className="input-label">{element.label}{element.input}</label>)}
                 </form>
             </aside>
         )

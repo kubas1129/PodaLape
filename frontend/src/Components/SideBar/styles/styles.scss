@@ -1,0 +1,77 @@
+$main-pink: #f4005c;
+$main-gray: #414143;
+$dark-pink: #d30141;
+
+@mixin input($outline-color, $height, $width){
+  outline:none;
+  border: 1px solid  $outline-color;
+  border-radius: 7px;
+  height: $height;
+  width: $width;
+}
+
+@mixin button($height, $width){
+  width: $width;
+  height: $height;
+  background-color: $main-pink;
+  color: white;
+  text-align: center;
+  border-radius: 7px;
+
+  &:hover{
+    background: $dark-pink;
+  }
+}
+
+
+aside{
+
+  width: 17%;
+  margin: 15px 0;
+  border-right: $dark-pink 2px dashed;
+  height: 750px;
+  color: black;
+  padding: 2px 0;
+
+  h2{
+    text-align: center;
+    color:$main-gray;
+  }
+
+  form{
+
+    .input-label {
+      display: block;
+      text-align: left;
+      width: 75%;
+      margin: 20px auto;
+      color: $main-gray;
+
+      input {
+        margin-top: 5px;
+        @include input($main-pink, 30px, 100%);
+      }
+
+      select {
+        display: block;
+        margin: 5px auto;
+        @include input($main-pink, 35px, 102%);
+        background: white;
+      }
+
+      input[type='radio'] {
+        width: 15px;
+        height: 15px;
+        margin: 0 5px 0 0;
+      }
+
+      .radio-box {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+    }
+  }
+
+}

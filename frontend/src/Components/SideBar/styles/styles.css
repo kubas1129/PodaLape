@@ -1,0 +1,49 @@
+aside {
+  width: 17%;
+  margin: 15px 0;
+  border-right: #d30141 2px dashed;
+  height: 750px;
+  color: black;
+  padding: 2px 0;
+}
+aside h2 {
+  text-align: center;
+  color: #414143;
+}
+aside form .input-label {
+  display: block;
+  text-align: left;
+  width: 75%;
+  margin: 20px auto;
+  color: #414143;
+}
+aside form .input-label input {
+  margin-top: 5px;
+  outline: none;
+  border: 1px solid #f4005c;
+  border-radius: 7px;
+  height: 30px;
+  width: 100%;
+}
+aside form .input-label select {
+  display: block;
+  margin: 5px auto;
+  outline: none;
+  border: 1px solid #f4005c;
+  border-radius: 7px;
+  height: 35px;
+  width: 102%;
+  background: white;
+}
+aside form .input-label input[type=radio] {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px 0 0;
+}
+aside form .input-label .radio-box {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=styles.css.map */
