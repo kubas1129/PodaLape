@@ -26,30 +26,27 @@ public class ShelterController {
         return shelterRepository.findOne(shelterId);
     }
 
-//    @PostMapping("/shelter")
-//    public Shelter create(@RequestBody Map<String,String> body){
-//        String name_shelter = body.get("name_shelter");
-//        double latitude = Double.parseDouble(body.get("latitude"));
-//        double longitude = Double.parseDouble(body.get("longitude"));
-//        String city = body.get("city");
-//        return shelterRepository.save(new Shelter(name_shelter,latitude,longitude,city));
-//    }
-//
-//    @PutMapping("/shelter/{id}")
-//    public Shelter update(@PathVariable String id, @RequestBody Map<String,String> body){
-//        int shelterId = Integer.parseInt(id);
-//        Shelter shelter = shelterRepository.findOne(shelterId);
-//        shelter.setName_shelter(body.get("name_shelter"));
-//        shelter.setLatitude(Double.parseDouble(body.get("latitude")));
-//        shelter.setLongitude(Double.parseDouble(body.get("longitude")));
-//        shelter.setCity(body.get("city"));
-//        return shelterRepository.save(shelter);
-//    }
-//
-//    @DeleteMapping("shelter/{id}")
-//    public boolean delete(@PathVariable String id) {
-//        int shelterId = Integer.parseInt(id);
-//        shelterRepository.delete(shelterId);
-//        return true;
-//    }
+    @PostMapping("/shelter")
+    public Shelter create(@RequestBody Shelter shelter){
+        return shelterRepository.save(shelter);
+    }
+
+    @PutMapping("/shelter/{id}")
+    public Shelter update(@PathVariable String id, @RequestBody Shelter shelter){
+        int shelterId = Integer.parseInt(id);
+        Shelter shelterUpdated = shelterRepository.findOne(shelterId);
+        shelterUpdated.setName_shelter(shelter.getName_shelter());
+        shelterUpdated.setLatitude(shelter.getLatitude());
+        shelterUpdated.setLongitude(shelter.getLongitude());
+        shelterUpdated.setCity(shelter.getCity());
+        shelterUpdated.setDogs(shelter.getDogs());
+        return shelterRepository.save(shelter);
+    }
+
+    @DeleteMapping("shelter/{id}")
+    public boolean delete(@PathVariable String id) {
+        int shelterId = Integer.parseInt(id);
+        shelterRepository.delete(shelterId);
+        return true;
+    }
 }
