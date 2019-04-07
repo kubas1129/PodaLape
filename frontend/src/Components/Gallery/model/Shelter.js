@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../styles/styles.css';
+import shelter1 from './images/shelter1_thumb.png'
+import shelter2 from './images/shelter2_thumb.png'
 
 const Shelter = (props) => {
     return (
         <div className="gallery-tab">
-            <img src="doggo.jpg" alt="tab-image"/>
+            <img src={props.details.id_shelter % 2 === 0 ? shelter1 : shelter2} alt="tab-image"/>
             <div className="tab-content">
                 <h2>{props.details.name_shelter}</h2>
                 <ul>

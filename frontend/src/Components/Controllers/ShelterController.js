@@ -30,12 +30,13 @@ class ShelterController extends Component{
         this.expand = this.expand.bind(this);
     }
 
-    /*
     componentWillMount(){
-        fetch("http://localhost:8090/dog/").then(function(response){
-            console.log(response);
+        fetch("http://localhost:8090/shelter/").then(function(response){
+            console.log(response.json().then(function(data){
+                console.log(data);
+            }));
         }).catch((error) => console.log(error));
-    }*/
+    }
 
     onChange = (event) => {
         const target = event.target;

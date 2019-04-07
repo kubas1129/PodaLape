@@ -51,7 +51,9 @@ class DogController extends Component{
 
     componentWillMount(){
         fetch("http://localhost:8090/dog/").then(function(response){
-            console.log(response.json());
+            console.log(response.json().then(function(data){
+                console.log(data);
+            }));
         }).catch((error) => console.log(error));
     }
 
