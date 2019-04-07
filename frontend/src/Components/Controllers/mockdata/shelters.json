@@ -1,8 +1,8 @@
-[{"id_shelter":201,"name_shelter":"Schronisko pod sloneczkiem","latitude":50.119521,"longitude":19.801144,"city":"Katowice","dogs":[
+[{"id_shelter":201,"name_shelter":"Schronisko pod sloneczkiem","latitude":50.119521,"longitude":19.801144,"city":"Katowice", "image": "./images/shelter1_thumb.png","dogs":[
   {"id_dog":101,"name":"Fafik","age":3,"breed":"Poodle","gender":"pies","color":"Kremowy","weight":11.0,"shelter":201},
   {"id_dog":103,"name":"Ares","age":6,"breed":"Pointer","gender":"pies","color":"Czarny","weight":13.0,"shelter":201}
 ]},
-  {"id_shelter":202,"name_shelter":"Dom dla czterech lap","latitude":52.149521,"longitude":20.501144,"city":"Warszawa","dogs":[
+  {"id_shelter":202,"name_shelter":"Dom dla czterech lap","latitude":52.149521,"longitude":20.501144,"city":"Warszawa","image": "./images/shelter2_thumb.png","dogs":[
     {"id_dog":102,"name":"Bolto","age":4,"breed":"Gordon","gender":"pies","color":"Czarny","weight":12.0,"shelter":202},
     {"id_dog":104,"name":"Rox","age":3,"breed":"Landseer","gender":"suczka","color":"Brazowy","weight":9.0,"shelter":202}]}
 ]

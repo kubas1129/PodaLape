@@ -1,2 +1,11 @@
+/home/jakubzol/projects/PodaLape/backend/src/main/java/shelter/controller/DogController.java
+/home/jakubzol/projects/PodaLape/backend/src/main/java/shelter/model/ShelterRepository.java
+/home/jakubzol/projects/PodaLape/backend/src/main/java/shelter/model/CustomerRepository.java
 /home/jakubzol/projects/PodaLape/backend/src/main/java/shelter/Main.java
 /home/jakubzol/projects/PodaLape/backend/src/main/java/shelter/controller/HomeController.java
+/home/jakubzol/projects/PodaLape/backend/src/main/java/shelter/model/Dog.java
+/home/jakubzol/projects/PodaLape/backend/src/main/java/shelter/model/Shelter.java
+/home/jakubzol/projects/PodaLape/backend/src/main/java/shelter/controller/CustomerController.java
+/home/jakubzol/projects/PodaLape/backend/src/main/java/shelter/model/DogRepository.java
+/home/jakubzol/projects/PodaLape/backend/src/main/java/shelter/controller/ShelterController.java
+/home/jakubzol/projects/PodaLape/backend/src/main/java/shelter/model/Customer.java

@@ -21,11 +21,21 @@ $dark-pink: #d30141;
   display:flex;
   justify-content: center;
 
+
+
   #shelter-content{
     width: 400px;
     height: 600px;
     margin-top: 45px;
     padding-right: 50px;
+
+    img{
+      display: block;
+      margin: 0 auto;
+      width: 375px;
+      height: 350px;
+    }
+
 
     ul{
       list-style-type: none;
