@@ -34,19 +34,17 @@ public class CustomerController {
     }*/
 
     @PostMapping("/customer")
-    public Customer create(@RequestBody Map<String,String> body){
-        String first_name = body.get("first_name");
-        String last_name = body.get("last_name");
-        return customerRepository.save(new Customer(first_name,last_name));
+    public Customer create(@RequestBody Customer customer){
+        return customerRepository.save(customer);
     }
 
     @PutMapping("/customer/{id}")
-    public Customer update(@PathVariable String id, @RequestBody Map<String,String> body){
+    public Customer update(@PathVariable String id, @RequestBody Customer customer){
         int customerId = Integer.parseInt(id);
-        Customer customer = customerRepository.findOne(customerId);
-        customer.setFirst_name(body.get("first_name"));
-        customer.setLast_name(body.get("last_name"));
-        return customerRepository.save(customer);
+        Customer updatedCustomer = customerRepository.findOne(customerId);
+        updatedCustomer.setFirst_name(customer.getFirst_name());
+        updatedCustomer.setLast_name(customer.getLast_name());
+        return customerRepository.save(updatedCustomer);
     }
 
     @DeleteMapping("customer/{id}")

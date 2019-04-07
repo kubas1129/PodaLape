@@ -1,8 +1,15 @@
 package shelter.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 
 @Entity
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id_dog")
 public class Dog {
 
     @Id
@@ -15,8 +22,11 @@ public class Dog {
     private String gender;
     private String color;
     private double weight;
-    @ManyToOne
+
+
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_shelter")
+//    @JsonManagedReference
     private Shelter shelter;
 
 
