@@ -28,13 +28,18 @@ header nav ul:before {
 }
 header nav ul:after {
   content: "";
-  width: 65%;
+  width: 70%;
 }
 header nav li {
   margin: 10px 50px 10px 0;
   font-size: 25px;
-  color: white;
   padding: 5px 15px;
+  color: white;
+}
+header nav li a {
+  color: white;
+  text-decoration: none;
+  outline: none;
 }
 header nav li:hover {
   background: #d30141;

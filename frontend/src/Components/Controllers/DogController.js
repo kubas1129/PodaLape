@@ -3,6 +3,7 @@ import SideBar from "../SideBar/SideBar";
 import dogs from "./mockdata/dogs";
 import Gallery from "../Gallery/Gallery";
 import './styles/styles.css';
+import TopBar from "../TopBar/TopBar";
 const axios = require('axios');
 
 class DogController extends Component{
@@ -46,6 +47,12 @@ class DogController extends Component{
 
         this.onChange = this.onChange.bind(this);
         this.expand = this.expand.bind(this);
+    }
+
+    componentWillMount(){
+        fetch("http://localhost:8090/dog/").then(function(response){
+            console.log(response.json());
+        }).catch((error) => console.log(error));
     }
 
     onChange = (event) => {
