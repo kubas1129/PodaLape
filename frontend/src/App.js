@@ -4,6 +4,7 @@ import DogController from "./Components/Controllers/DogController";
 import ShelterController from "./Components/Controllers/ShelterController";
 import {Route, Redirect, Switch} from "react-router-dom";
 import {BrowserRouter} from 'react-router-dom';
+import DogForm from "./Components/Form/DogForm";
 const axios = require('axios');
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
                 <Switch>
                 <Route path="/dogs" render={() => <DogController/>}/>
                 <Route path="/shelters" render={() => <ShelterController/>}/>
+                    <Route path="/form" render = {() => <DogForm/>}/>
                 <Redirect from='{*}' to='/dogs'/>
                 </Switch>
             </BrowserRouter>

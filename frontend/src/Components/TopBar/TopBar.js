@@ -21,7 +21,7 @@ class TopBar extends Component{
                     <ul>
                         <li> <Link to="/dogs">Psy</Link> </li>
                         <li> <Link to="/shelters">Schroniska </Link></li>
-                        <li> Oddaj Psa </li>
+                        <li> <Link to="/form">Oddaj Psa </Link></li>
                     </ul>
                 </nav>
                 <div id="logout-section">
