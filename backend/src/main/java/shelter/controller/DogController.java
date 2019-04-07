@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import shelter.model.Dog;
 import shelter.model.DogRepository;
-import shelter.model.Shelter;
 
 import java.util.List;
 import java.util.Map;
