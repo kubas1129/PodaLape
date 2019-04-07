@@ -61,7 +61,7 @@ class DogController extends Component{
 
            const upper = this.state.dogs.content.length;
 
-           self.filter(upper);
+           self.filter();
 
        });
     };
